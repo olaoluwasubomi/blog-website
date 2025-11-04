@@ -1,103 +1,90 @@
-import Image from "next/image";
+// import NavBar from "./components/Navbar";
+// import bgImage from "../../public/images/JSON Guide_ Web Dev Essentials.jpeg";
+// import image1 from "../../public/images/Swift _ Flutter _ iOS dev _ mobile developer.jpeg";
+// import image2 from "../../public/images/cruel winter with you _ ali hazelwood.jpeg";
+// import Image from "next/image";
+// import Link from "next/link";
+// import latestNews from "./data/latest-news-sample";
+
+// export default function Home() {
+//   const latest = latestNews.map((items, i) => (
+//     <div key={i} className="bg-white p-10 rounded-xl shadow-2xl max-w-md">
+//       <h3 className="text-2xl font-semibold mb-3">{items.title}</h3>
+//       <p className="text-justify leading-7 text-gray-700 mb-4">{items.text}</p>
+//       <Link
+//         href={`/blogs/${items.id}`}
+//         className="text-black text-center block font-medium hover:underline uppercase"
+//       >
+//         {items.action}
+//       </Link>
+//     </div>
+//   ));
+
+//   return (
+//     <div className="relative min-h-screen">
+//       {/* ===== Fullscreen Header Section ===== */}
+//       <div className="relative w-full h-screen flex flex-col items-center justify-start text-center text-white overflow-hidden">
+//         {/* Background Image */}
+//         <Image
+//           src={bgImage}
+//           alt="Coffee background"
+//           fill
+//           className="object-cover object-center"
+//           priority
+//         />
+
+//         {/* Dark overlay */}
+//         <div className="absolute inset-0 bg-black/80"></div>
+
+//         {/* === Navbar (inside hero) === */}
+//         <NavBar />
+
+//         {/* Text Content */}
+//         <div className="relative z-10 px-4 mt-80">
+//           <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold italic tracking-wide">
+//             Stories & Coffee
+//           </h3>
+//           <p className="text-sm md:text-base lg:text-xl mt-5 text-gray-200">
+//             Every story starts with a sip
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* ===== Overlapping Images Section ===== */}
+//       <section className="flex items-center justify-center gap-x-8 z-20 -mt-90">
+//         <div className="relative w-100 h-100 rotate-x-15 -rotate-y-40 drop-shadow-2xl transform -translate-y-6">
+//           <Image src={bgImage} alt="image1" fill className="object-cover rounded-xl" />
+//         </div>
+
+//         <div className="relative w-100 h-100 z-10 drop-shadow-2xl">
+//           <Image src={image1} alt="image2" fill className="object-cover rounded-xl" />
+//         </div>
+
+//         <div className="relative w-100 h-100 rotate-x-15 rotate-y-40 drop-shadow-2xl transform -translate-y-6">
+//           <Image src={image2} alt="image3" fill className="object-cover rounded-xl" />
+//         </div>
+//       </section>
+
+//       {/* ===== Latest News Section ===== */}
+//       <div className="bg-gray-100 -mt-16 px-10 py-30">
+//         <h4 className="text-center pt-5 pb-10 text-5xl italic">My Latest Blogs</h4>
+//         <section className="flex flex-wrap justify-center items-start gap-10">
+//           {latest}
+//       </section>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
+
+"use client";
+
+import {redirect} from "next/navigation";
+// import "../../src/app/globals.css";
+import "./globals.css";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+  redirect("/onboarding/login");
 }
