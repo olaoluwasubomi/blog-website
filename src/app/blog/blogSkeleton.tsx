@@ -1,4 +1,3 @@
-// app/blog/BlogSkeleton.tsx
 export default function BlogSkeleton() {
     return (
       <div className="animate-pulse grid md:grid-cols-3 gap-6 mt-10">

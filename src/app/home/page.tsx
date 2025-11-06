@@ -41,7 +41,7 @@ export default function Home() {
         <NavBar />
 
         {/* Text Content */}
-        <div className="relative z-10 px-4 mt-80">
+        <div className="relative z-10 px-4 mt-80 xl:mt-50 lg:mt-50 md:mt-80 sm:mt-80">
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold italic tracking-wide">
             Stories & Coffee
           </h3>
@@ -52,7 +52,7 @@ export default function Home() {
       </div>
 
       {/* ===== Overlapping Images Section ===== */}
-      <section className="flex items-center justify-center gap-x-8 z-20 -mt-90">
+      <section className="flex items-center justify-center gap-x-8 z-20 -mt-90 xl:-mt-90 lg:-mt-70 md:-mt-60 sm:mt-40">
         <div className="relative w-100 h-100 rotate-x-15 -rotate-y-40 drop-shadow-2xl transform -translate-y-6">
           <Image src={bgImage} alt="image1" fill className="object-cover rounded-xl" />
         </div>

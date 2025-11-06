@@ -1,4 +1,3 @@
-// app/blog/BlogCard.tsx
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,9 +13,10 @@ export type BlogPost = {
 
 interface BlogCardProps {
   post: BlogPost;
+  slug: string;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ post , slug }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${post.slug}`}

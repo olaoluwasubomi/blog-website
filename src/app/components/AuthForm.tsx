@@ -89,6 +89,8 @@ export default function AuthForm({ mode = "login" }: AuthFormProps) {
           console.log("The username is", user , token);
 
           localStorage.setItem("user", JSON.stringify(user.name));
+          localStorage.setItem("role", user.role);
+          console.log("The role is", user.role);
           localStorage.setItem("token", token);
           toast.success(`Welcome back ${user.name}`);
 
